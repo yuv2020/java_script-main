@@ -24,11 +24,13 @@ const new_string = "    reversed    ";
 console.log(new_string);
 console.log(new_string.trim());
 
-const url = "https://youtube.com"
-console.log(url.replace( 'tube' - 'you'));
+const url = "https://youtube.com/tyve56"
+console.log(url.replace( '56' - '-'));
 console.log(url.includes('sundar'));
 
 
 console.log(url.startsWith("https://"));
+
+console.log(str1.split('-'))
 
 
