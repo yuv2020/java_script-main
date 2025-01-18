@@ -71,4 +71,27 @@ console.log(Object.create(null));      // create a new object with no prototype
 
 console.log(tinderuser.hasOwnProperty('name')); // hasOwnProperty is used to get the description of a property
 
+/* De-structuring of array */
+console.log(" ========== de-structuring of objects ==========")
+const course = {
+    coursenames: "js in hindi",
+    price : "USD",
+    instructor : "Dr. Sameer",
+    duration : 20
+}
+
+// console.log(course.instructor)
+
+const { instructor } = course;
+console.log(instructor)
+
+const { instructor: instructorName } = course;
+console.log(instructorName)
+
+// {
+//     "name" : "Yuvraj",
+//     "age" : 25,
+//     "city" : "Pune"
+// }
+
 
