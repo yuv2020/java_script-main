@@ -1,0 +1,60 @@
+Adding the list items from the list using Javascript
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM ! </title>
+</head>
+<body style="background-color:blue; color:aliceblue">
+    <ul class="language">
+        <li>Javascript server</li>
+    </ul>
+</body>
+
+<script>
+    function addlanguage(langname){
+        const l = document.createElement('li');
+        l.innerHTML = `${langname}`
+        document.querySelector('.language').
+        appendChild(l)
+    }
+    addlanguage('Python')
+    addlanguage('Java')
+    addlanguage('C++')
+
+    // Optimised work 
+
+    function addoptimised(langname) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langname));
+        document.querySelector('.language').appendChild(li);
+    }
+    addoptimised('Ruby')
+    addoptimised('Go')
+
+    // Edit the value
+
+    const secondlang = document.querySelector("li:nth-child(2)");
+    <!-- secondlang.innerHTML = "Mojo"; -->
+    const li = document.createElement("li");
+    li.textContent = "Mojo";
+    secondlang.replaceWith(li);
+
+    <!-- secondlang.parentNode.replaceChild(li, secondlang); -->
+
+    // Edit the first element
+    const firstlang = document.querySelector("li:nth-child(1)")
+    firstlang.outerHTML = "<li> Typescript </li>";
+
+    // Remove the last element
+    const lastlang = document.querySelector("li:last-child")
+    <!-- lastlang.parentNode.removeChild(lastlang); -->
+    lastlang.remove()
+
+    // Remove all elements
+    <!-- document.querySelector('.language').innerHTML = ""; -->
+</script>
+
+</html>
